@@ -1,0 +1,312 @@
+.jobs-page {
+  @apply min-h-screen bg-gray-50 py-8;
+}
+
+.jobs-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.jobs-header {
+  @apply mb-8;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.jobs-title {
+  @apply text-4xl font-bold text-gray-900 mb-2;
+}
+
+.jobs-subtitle {
+  @apply text-gray-600;
+}
+
+.jobs-filter-card {
+  @apply bg-white p-6 rounded-xl shadow-md mb-8;
+  animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
+.jobs-filter-header {
+  @apply flex items-center gap-2 mb-4;
+}
+
+.jobs-filter-icon {
+  @apply text-blue-600;
+}
+
+.jobs-filter-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.jobs-filter-content {
+  @apply space-y-4;
+}
+
+.jobs-search-wrapper {
+  @apply flex-1 relative;
+}
+
+.jobs-search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400;
+}
+
+.jobs-search-input {
+  @apply w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all;
+}
+
+.jobs-search-input:focus {
+  @apply border-blue-500 shadow-md;
+}
+
+.jobs-filter-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+}
+
+.jobs-filter-select {
+  @apply px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white transition-all cursor-pointer;
+}
+
+.jobs-filter-select:hover {
+  @apply border-blue-400;
+}
+
+.jobs-filter-select:focus {
+  @apply border-blue-500 shadow-md;
+}
+
+.jobs-clear-btn {
+  @apply px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium;
+}
+
+.jobs-results-count {
+  @apply mb-4 text-gray-600;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.jobs-list {
+  @apply grid grid-cols-1 gap-6;
+}
+
+.job-card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all p-6;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.job-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.job-card-header {
+  @apply flex flex-col md:flex-row md:items-start md:justify-between mb-4;
+}
+
+.job-card-main {
+  @apply flex-1;
+}
+
+.job-card-company-section {
+  @apply flex items-start gap-4 mb-3;
+}
+
+.job-card-logo {
+  @apply w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0;
+}
+
+.job-card-logo-image {
+  @apply w-16 h-16 rounded-lg object-cover;
+}
+
+.job-card-logo-icon {
+  @apply text-blue-600;
+}
+
+.job-card-title-section {
+  @apply flex-1;
+}
+
+.job-card-title {
+  @apply text-2xl font-bold text-gray-900 mb-1;
+}
+
+.job-card-company {
+  @apply text-lg text-gray-700 font-semibold;
+}
+
+.job-card-meta {
+  @apply flex flex-wrap gap-4 mb-4;
+}
+
+.job-card-meta-item {
+  @apply flex items-center text-gray-600;
+}
+
+.job-card-meta-icon {
+  @apply mr-2;
+}
+
+.job-card-meta-icon-location {
+  @apply text-blue-600;
+}
+
+.job-card-meta-icon-salary {
+  @apply text-green-600;
+}
+
+.job-card-meta-icon-deadline {
+  @apply text-orange-600;
+}
+
+.job-card-badges {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.job-card-badge {
+  @apply px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.job-card-badge-employment {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.job-card-badge-experience {
+  @apply bg-green-100 text-green-700;
+}
+
+.job-card-badge-qualification {
+  @apply bg-purple-100 text-purple-700;
+}
+
+.job-card-badge-role {
+  @apply bg-orange-100 text-orange-700;
+}
+
+.job-card-badge-category {
+  @apply bg-pink-100 text-pink-700;
+}
+
+.job-card-section {
+  @apply mb-4;
+}
+
+.job-card-section-title {
+  @apply font-semibold text-gray-900 mb-2;
+}
+
+.job-card-section-content {
+  @apply text-gray-700;
+}
+
+.job-card-description {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.job-card-actions {
+  @apply flex flex-col sm:flex-row gap-3;
+}
+
+.job-card-apply-btn {
+  @apply flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center;
+}
+
+.job-card-apply-btn:active {
+  @apply transform scale-95;
+}
+
+.job-card-email-btn {
+  @apply flex-1 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center;
+}
+
+.jobs-empty-state {
+  @apply text-center py-16 bg-white rounded-xl;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.jobs-empty-icon {
+  @apply mx-auto text-gray-300 mb-4;
+}
+
+.jobs-empty-title {
+  @apply text-xl font-semibold text-gray-900 mb-2;
+}
+
+.jobs-empty-subtitle {
+  @apply text-gray-600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs-title {
+    @apply text-3xl;
+  }
+
+  .jobs-filter-grid {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .job-card {
+    @apply p-4;
+  }
+
+  .job-card-title {
+    @apply text-xl;
+  }
+
+  .job-card-company {
+    @apply text-base;
+  }
+
+  .job-card-meta {
+    @apply gap-2;
+  }
+
+  .job-card-meta-item {
+    @apply text-sm;
+  }
+
+  .job-card-badges {
+    @apply gap-1;
+  }
+
+  .job-card-badge {
+    @apply text-xs px-2;
+  }
+}
+
+@media (max-width: 640px) {
+  .jobs-filter-card {
+    @apply p-4;
+  }
+
+  .job-card-company-section {
+    @apply flex-col items-center text-center;
+  }
+
+  .job-card-logo {
+    @apply w-12 h-12;
+  }
+
+  .job-card-actions {
+    @apply gap-2;
+  }
+
+  .job-card-apply-btn,
+  .job-card-email-btn {
+    @apply py-2 text-sm;
+  }
+}
+
+.jobs-loading {
+  @apply flex items-center justify-center py-16;
+}
+
+.jobs-loading-spinner {
+  @apply inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin;
+}

@@ -1,0 +1,416 @@
+.about-page {
+  @apply min-h-screen bg-gray-50 py-8;
+}
+
+.about-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.about-hero {
+  @apply bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-8 md:p-12 mb-8;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.about-hero-title {
+  @apply text-4xl md:text-5xl font-bold mb-4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-hero-subtitle {
+  @apply text-xl text-blue-100;
+}
+
+.about-intro-card {
+  @apply bg-white rounded-xl shadow-md p-8 mb-8;
+  animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
+.about-section-title {
+  @apply text-3xl font-bold text-gray-900 mb-6;
+}
+
+.about-intro-text {
+  @apply text-gray-700 text-lg leading-relaxed mb-4;
+}
+
+.about-intro-text:last-child {
+  @apply mb-0;
+}
+
+.about-vision-mission-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 mb-8;
+}
+
+.about-vision-card,
+.about-mission-card {
+  @apply bg-white rounded-xl shadow-md p-8;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.about-vision-card {
+  animation-delay: 0.3s;
+}
+
+.about-mission-card {
+  animation-delay: 0.4s;
+}
+
+.about-card-header {
+  @apply flex items-center gap-3 mb-4;
+}
+
+.about-card-icon-wrapper {
+  @apply p-3 rounded-lg;
+}
+
+.about-vision-icon-wrapper {
+  @apply bg-blue-100;
+}
+
+.about-mission-icon-wrapper {
+  @apply bg-green-100;
+}
+
+.about-card-icon {
+  @apply w-8 h-8;
+}
+
+.about-vision-icon {
+  @apply text-blue-600;
+}
+
+.about-mission-icon {
+  @apply text-green-600;
+}
+
+.about-card-title {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.about-card-content {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.about-values-card {
+  @apply bg-white rounded-xl shadow-md p-8 mb-8;
+  animation: fadeIn 0.6s ease-out 0.5s backwards;
+}
+
+.about-values-title {
+  @apply text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3;
+}
+
+.about-values-title-icon {
+  @apply text-blue-600;
+}
+
+.about-values-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.about-value-item {
+  @apply flex items-start gap-3;
+}
+
+.about-value-icon {
+  @apply text-green-600 flex-shrink-0 mt-1;
+}
+
+.about-value-text {
+  @apply text-gray-700;
+}
+
+.about-services-card {
+  @apply bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md p-8;
+  animation: fadeIn 0.6s ease-out 0.6s backwards;
+}
+
+.about-services-title {
+  @apply text-3xl font-bold text-gray-900 mb-6;
+}
+
+.about-services-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.about-service-card {
+  @apply p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow;
+}
+
+.about-service-card:nth-child(1) {
+  animation: fadeIn 0.5s ease-out 0.7s backwards;
+}
+
+.about-service-card:nth-child(2) {
+  animation: fadeIn 0.5s ease-out 0.8s backwards;
+}
+
+.about-service-card:nth-child(3) {
+  animation: fadeIn 0.5s ease-out 0.9s backwards;
+}
+
+.about-service-title {
+  @apply text-xl font-bold text-blue-600 mb-3;
+}
+
+.about-service-description {
+  @apply text-gray-700;
+}
+
+.about-stats-section {
+  @apply bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-8 md:p-12;
+  animation: fadeIn 0.6s ease-out 0.7s backwards;
+}
+
+.about-stats-title {
+  @apply text-3xl font-bold mb-8 text-center;
+}
+
+.about-stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-8;
+}
+
+.about-stat-card {
+  @apply text-center;
+}
+
+.about-stat-card:nth-child(1) { animation: fadeIn 0.5s ease-out 0.8s backwards; }
+.about-stat-card:nth-child(2) { animation: fadeIn 0.5s ease-out 0.9s backwards; }
+.about-stat-card:nth-child(3) { animation: fadeIn 0.5s ease-out 1s backwards; }
+.about-stat-card:nth-child(4) { animation: fadeIn 0.5s ease-out 1.1s backwards; }
+
+.about-stat-value {
+  @apply text-5xl font-bold mb-2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-stat-label {
+  @apply text-blue-100;
+}
+
+.about-team-section {
+  @apply mt-8 bg-white rounded-xl shadow-md p-8;
+  animation: fadeIn 0.6s ease-out 0.8s backwards;
+}
+
+.about-team-title {
+  @apply text-3xl font-bold text-gray-900 mb-6 text-center;
+}
+
+.about-team-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.about-team-member {
+  @apply text-center;
+}
+
+.about-team-photo {
+  @apply w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100;
+}
+
+.about-team-name {
+  @apply font-bold text-lg text-gray-900 mb-1;
+}
+
+.about-team-role {
+  @apply text-blue-600 mb-2;
+}
+
+.about-team-bio {
+  @apply text-sm text-gray-600;
+}
+
+.about-cta-section {
+  @apply mt-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-8 md:p-12 text-center;
+  animation: fadeIn 0.6s ease-out 0.9s backwards;
+}
+
+.about-cta-title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.about-cta-subtitle {
+  @apply text-xl text-blue-100 mb-8;
+}
+
+.about-cta-buttons {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.about-cta-btn-primary {
+  @apply bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg;
+}
+
+.about-cta-btn-secondary {
+  @apply border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-title {
+    @apply text-3xl;
+  }
+
+  .about-hero-subtitle {
+    @apply text-lg;
+  }
+
+  .about-hero {
+    @apply p-6;
+  }
+
+  .about-intro-card,
+  .about-values-card,
+  .about-services-card {
+    @apply p-6;
+  }
+
+  .about-section-title {
+    @apply text-2xl;
+  }
+
+  .about-intro-text {
+    @apply text-base;
+  }
+
+  .about-vision-mission-grid {
+    @apply gap-6;
+  }
+
+  .about-vision-card,
+  .about-mission-card {
+    @apply p-6;
+  }
+
+  .about-card-title {
+    @apply text-xl;
+  }
+
+  .about-values-grid,
+  .about-services-grid {
+    @apply gap-4;
+  }
+
+  .about-stats-section {
+    @apply p-6;
+  }
+
+  .about-stats-grid {
+    @apply grid-cols-2 gap-6;
+  }
+
+  .about-stat-value {
+    @apply text-3xl;
+  }
+
+  .about-team-section {
+    @apply p-6;
+  }
+
+  .about-team-grid {
+    @apply gap-6;
+  }
+
+  .about-cta-section {
+    @apply p-6;
+  }
+
+  .about-cta-title {
+    @apply text-2xl;
+  }
+
+  .about-cta-subtitle {
+    @apply text-lg;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    @apply p-4;
+  }
+
+  .about-intro-card,
+  .about-values-card,
+  .about-services-card,
+  .about-team-section {
+    @apply p-4;
+  }
+
+  .about-stats-section {
+    @apply p-4;
+  }
+
+  .about-stats-grid {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .about-team-grid {
+    @apply grid-cols-1;
+  }
+
+  .about-cta-section {
+    @apply p-4;
+  }
+
+  .about-cta-buttons {
+    @apply flex-col gap-3;
+  }
+}
+
+.about-timeline {
+  @apply relative border-l-2 border-blue-200 ml-4 space-y-8 mt-8;
+}
+
+.about-timeline-item {
+  @apply relative pl-8;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.about-timeline-marker {
+  @apply absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-2 border-white;
+}
+
+.about-timeline-year {
+  @apply text-blue-600 font-bold mb-2;
+}
+
+.about-timeline-title {
+  @apply font-bold text-gray-900 mb-1;
+}
+
+.about-timeline-description {
+  @apply text-gray-700 text-sm;
+}
