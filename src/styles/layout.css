@@ -1,0 +1,283 @@
+.page-container {
+  @apply min-h-screen flex flex-col;
+}
+
+.page-header {
+  @apply sticky top-0 z-50 bg-white shadow-md;
+}
+
+.page-content {
+  @apply flex-1;
+}
+
+.page-footer {
+  @apply bg-gray-900 text-white py-8 mt-16;
+}
+
+.container-fluid {
+  @apply w-full px-4 sm:px-6 lg:px-8;
+}
+
+.container-narrow {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.container-wide {
+  @apply max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.section-sm {
+  @apply py-8 md:py-12;
+}
+
+.section-lg {
+  @apply py-16 md:py-20 lg:py-24;
+}
+
+.hero-section {
+  @apply relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 md:py-28 overflow-hidden;
+}
+
+.hero-content {
+  @apply relative z-10 text-center;
+}
+
+.hero-title {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6;
+}
+
+.hero-subtitle {
+  @apply text-xl md:text-2xl mb-8 text-blue-100;
+}
+
+.hero-actions {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.grid-layout {
+  @apply grid gap-6;
+}
+
+.grid-2 {
+  @apply grid-cols-1 md:grid-cols-2;
+}
+
+.grid-3 {
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.grid-4 {
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+.grid-5 {
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5;
+}
+
+.flex-layout {
+  @apply flex flex-wrap gap-6;
+}
+
+.flex-col-layout {
+  @apply flex flex-col gap-6;
+}
+
+.sidebar-layout {
+  @apply grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6;
+}
+
+.sidebar-layout-right {
+  @apply grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-6;
+}
+
+.sidebar {
+  @apply bg-white rounded-xl shadow-md p-6;
+}
+
+.main-content {
+  @apply bg-white rounded-xl shadow-md p-6;
+}
+
+.card-layout {
+  @apply bg-white rounded-xl shadow-md p-6;
+}
+
+.card-header {
+  @apply border-b border-gray-200 pb-4 mb-4;
+}
+
+.card-body {
+  @apply py-4;
+}
+
+.card-footer {
+  @apply border-t border-gray-200 pt-4 mt-4;
+}
+
+.list-layout {
+  @apply space-y-4;
+}
+
+.list-item {
+  @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow;
+}
+
+.split-layout {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-8 items-center;
+}
+
+.split-content {
+  @apply space-y-4;
+}
+
+.split-image {
+  @apply rounded-xl overflow-hidden shadow-lg;
+}
+
+.masonry-layout {
+  @apply columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6;
+}
+
+.masonry-item {
+  @apply break-inside-avoid mb-6;
+}
+
+.banner {
+  @apply bg-blue-600 text-white py-3 px-6 text-center;
+}
+
+.banner-warning {
+  @apply bg-yellow-500 text-gray-900 py-3 px-6 text-center;
+}
+
+.banner-danger {
+  @apply bg-red-600 text-white py-3 px-6 text-center;
+}
+
+.banner-success {
+  @apply bg-green-600 text-white py-3 px-6 text-center;
+}
+
+.alert {
+  @apply p-4 rounded-lg border;
+}
+
+.alert-info {
+  @apply bg-blue-50 border-blue-200 text-blue-800;
+}
+
+.alert-warning {
+  @apply bg-yellow-50 border-yellow-200 text-yellow-800;
+}
+
+.alert-danger {
+  @apply bg-red-50 border-red-200 text-red-800;
+}
+
+.alert-success {
+  @apply bg-green-50 border-green-200 text-green-800;
+}
+
+.navbar {
+  @apply flex items-center justify-between py-4;
+}
+
+.navbar-brand {
+  @apply flex items-center gap-3 font-bold text-xl;
+}
+
+.navbar-menu {
+  @apply hidden md:flex items-center gap-2;
+}
+
+.navbar-item {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+}
+
+.navbar-toggle {
+  @apply md:hidden p-2 rounded-md hover:bg-gray-100;
+}
+
+.mobile-menu {
+  @apply md:hidden bg-white border-t border-gray-200;
+}
+
+.breadcrumb {
+  @apply flex items-center gap-2 text-sm text-gray-600 mb-4;
+}
+
+.breadcrumb-item {
+  @apply hover:text-blue-600 transition-colors;
+}
+
+.breadcrumb-separator {
+  @apply text-gray-400;
+}
+
+.pagination {
+  @apply flex items-center justify-center gap-2 mt-8;
+}
+
+.pagination-item {
+  @apply px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors;
+}
+
+.pagination-item.active {
+  @apply bg-blue-600 text-white border-blue-600;
+}
+
+.tabs {
+  @apply flex border-b border-gray-200 mb-6;
+}
+
+.tab {
+  @apply px-6 py-3 font-medium text-gray-600 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 transition-colors;
+}
+
+.tab.active {
+  @apply text-blue-600 border-blue-600;
+}
+
+.accordion-item {
+  @apply border-b border-gray-200 last:border-b-0;
+}
+
+.accordion-header {
+  @apply flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50 transition-colors;
+}
+
+.accordion-content {
+  @apply p-4 bg-gray-50;
+}
+
+.timeline {
+  @apply relative border-l-2 border-gray-200 ml-4 space-y-8;
+}
+
+.timeline-item {
+  @apply relative pl-8;
+}
+
+.timeline-marker {
+  @apply absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-2 border-white;
+}
+
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.stat-card {
+  @apply text-center p-6 bg-white rounded-xl shadow-md;
+}
+
+.stat-value {
+  @apply text-4xl font-bold text-gray-900 mb-2;
+}
+
+.stat-label {
+  @apply text-gray-600;
+}

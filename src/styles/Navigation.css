@@ -1,0 +1,99 @@
+/* Navigation Bar - Full Width */
+.navbar {
+  @apply w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white shadow-md sticky top-0 z-50;
+}
+
+.navbar-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between;
+}
+
+.navbar-logo {
+  @apply flex items-center gap-2 cursor-pointer transition-opacity hover:opacity-80;
+}
+
+.navbar-logo-icon {
+  @apply text-blue-600;
+}
+
+.navbar-logo-text {
+  @apply text-lg font-bold text-gray-900 hidden sm:block;
+}
+
+.navbar-logo-subtitle {
+  @apply text-xs text-gray-600 hidden sm:block leading-none;
+}
+
+.navbar-nav {
+  @apply hidden md:flex items-center gap-1;
+}
+
+.navbar-nav-item {
+  @apply px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+}
+
+.navbar-nav-item.active {
+  @apply bg-blue-600 text-white;
+}
+
+.navbar-nav-item:not(.active) {
+  @apply text-gray-700 hover:bg-gray-100;
+}
+
+.navbar-admin-exit {
+  @apply ml-4 px-4 py-2 rounded-md text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors;
+}
+
+.navbar-toggle {
+  @apply md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors;
+}
+
+.navbar-toggle-icon {
+  @apply w-6 h-6;
+}
+
+/* Mobile Menu */
+.navbar-mobile-menu {
+  @apply md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg;
+}
+
+.navbar-mobile-menu-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-1;
+}
+
+.navbar-mobile-item {
+  @apply block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200;
+}
+
+.navbar-mobile-item.active {
+  @apply bg-blue-600 text-white;
+}
+
+.navbar-mobile-item:not(.active) {
+  @apply text-gray-700 hover:bg-gray-100;
+}
+
+.navbar-mobile-admin-exit {
+  @apply block w-full text-left px-3 py-2 rounded-md text-base font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-logo-text,
+  .navbar-logo-subtitle {
+    @apply hidden;
+  }
+
+  .navbar-logo-icon {
+    @apply w-8 h-8;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-container {
+    @apply px-3;
+  }
+
+  .navbar-nav-item {
+    @apply px-3 py-1.5 text-xs;
+  }
+}

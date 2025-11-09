@@ -1,0 +1,277 @@
+.candidates-page {
+  @apply min-h-screen bg-gray-50 py-8;
+}
+
+.candidates-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.candidates-header {
+  @apply mb-8;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.candidates-title {
+  @apply text-4xl font-bold text-gray-900 mb-2 flex items-center gap-3;
+}
+
+.candidates-title-icon {
+  @apply text-blue-600;
+}
+
+.candidates-subtitle {
+  @apply text-gray-600;
+}
+
+.candidates-filter-card {
+  @apply bg-white p-6 rounded-xl shadow-md mb-8;
+  animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
+.candidates-filter-content {
+  @apply flex flex-col md:flex-row gap-4;
+}
+
+.candidates-search-wrapper {
+  @apply flex-1 relative;
+}
+
+.candidates-search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400;
+}
+
+.candidates-search-input {
+  @apply w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all;
+}
+
+.candidates-search-input:focus {
+  @apply border-blue-500 shadow-md;
+}
+
+.candidates-location-select {
+  @apply px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white transition-all cursor-pointer;
+}
+
+.candidates-location-select:hover {
+  @apply border-blue-400;
+}
+
+.candidates-location-select:focus {
+  @apply border-blue-500 shadow-md;
+}
+
+.candidates-count {
+  @apply mb-4 text-gray-600;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.candidates-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.candidate-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-2;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.candidate-card:nth-child(1) { animation-delay: 0.05s; }
+.candidate-card:nth-child(2) { animation-delay: 0.1s; }
+.candidate-card:nth-child(3) { animation-delay: 0.15s; }
+.candidate-card:nth-child(4) { animation-delay: 0.2s; }
+.candidate-card:nth-child(5) { animation-delay: 0.25s; }
+.candidate-card:nth-child(6) { animation-delay: 0.3s; }
+.candidate-card:nth-child(7) { animation-delay: 0.35s; }
+.candidate-card:nth-child(8) { animation-delay: 0.4s; }
+
+.candidate-image-container {
+  @apply h-72 overflow-hidden bg-gray-200 relative;
+}
+
+.candidate-image {
+  @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.candidate-card:hover .candidate-image {
+  @apply scale-110;
+}
+
+.candidate-image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300;
+}
+
+.candidate-card:hover .candidate-image-overlay {
+  @apply opacity-100;
+}
+
+.candidate-info {
+  @apply p-5;
+}
+
+.candidate-name {
+  @apply font-bold text-xl text-gray-900 mb-2;
+}
+
+.candidate-job-title {
+  @apply text-blue-600 font-semibold mb-1;
+}
+
+.candidate-company {
+  @apply text-gray-700 mb-3;
+}
+
+.candidate-location {
+  @apply flex items-center text-sm text-gray-500 mb-2;
+}
+
+.candidate-location-icon {
+  @apply mr-1;
+}
+
+.candidate-joining-date {
+  @apply text-sm text-gray-600 bg-green-50 px-3 py-2 rounded-lg;
+}
+
+.candidate-joining-label {
+  @apply font-medium;
+}
+
+.candidate-remarks {
+  @apply text-xs text-gray-500 mt-3 italic border-t border-gray-100 pt-3;
+}
+
+.candidates-empty-state {
+  @apply col-span-full text-center py-16 bg-white rounded-xl;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.candidates-empty-icon {
+  @apply mx-auto text-gray-300 mb-4;
+}
+
+.candidates-empty-title {
+  @apply text-xl font-semibold text-gray-900 mb-2;
+}
+
+.candidates-empty-subtitle {
+  @apply text-gray-600;
+}
+
+.candidate-badge {
+  @apply inline-block px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.candidate-badge-new {
+  @apply bg-green-100 text-green-700;
+}
+
+.candidate-badge-featured {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.candidate-stats-bar {
+  @apply flex justify-between items-center text-xs text-gray-500 mt-3 pt-3 border-t border-gray-100;
+}
+
+.candidate-stat-item {
+  @apply flex items-center gap-1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .candidates-grid {
+    @apply xl:grid-cols-3;
+  }
+}
+
+@media (max-width: 768px) {
+  .candidates-title {
+    @apply text-3xl;
+  }
+
+  .candidates-grid {
+    @apply lg:grid-cols-2;
+  }
+
+  .candidate-image-container {
+    @apply h-64;
+  }
+
+  .candidate-info {
+    @apply p-4;
+  }
+
+  .candidate-name {
+    @apply text-lg;
+  }
+}
+
+@media (max-width: 640px) {
+  .candidates-filter-card {
+    @apply p-4;
+  }
+
+  .candidates-grid {
+    @apply sm:grid-cols-1;
+  }
+
+  .candidate-card {
+    @apply max-w-sm mx-auto;
+  }
+
+  .candidate-image-container {
+    @apply h-56;
+  }
+}
+
+.candidates-loading {
+  @apply flex items-center justify-center py-16;
+}
+
+.candidates-loading-spinner {
+  @apply inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin;
+}
+
+.candidates-grid-skeleton {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.candidate-card-skeleton {
+  @apply bg-white rounded-xl shadow-md overflow-hidden;
+}
+
+.candidate-image-skeleton {
+  @apply h-72 bg-gray-200 animate-pulse;
+}
+
+.candidate-info-skeleton {
+  @apply p-5 space-y-3;
+}
+
+.candidate-skeleton-line {
+  @apply h-4 bg-gray-200 rounded animate-pulse;
+}
+
+.candidate-skeleton-line-short {
+  @apply w-3/4;
+}

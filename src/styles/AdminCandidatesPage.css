@@ -1,0 +1,410 @@
+.admin-candidates-page {
+  @apply min-h-screen bg-gray-50 py-8;
+}
+
+.admin-candidates-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.admin-candidates-header {
+  @apply flex justify-between items-center mb-8;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.admin-candidates-header-content {
+  @apply flex-1;
+}
+
+.admin-candidates-title {
+  @apply text-4xl font-bold text-gray-900 mb-2;
+}
+
+.admin-candidates-subtitle {
+  @apply text-gray-600;
+}
+
+.admin-candidates-add-btn {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2 shadow-md hover:shadow-lg;
+}
+
+.admin-candidates-add-btn:active {
+  @apply transform scale-95;
+}
+
+.admin-candidates-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.admin-candidate-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.admin-candidate-card:nth-child(1) { animation-delay: 0.05s; }
+.admin-candidate-card:nth-child(2) { animation-delay: 0.1s; }
+.admin-candidate-card:nth-child(3) { animation-delay: 0.15s; }
+.admin-candidate-card:nth-child(4) { animation-delay: 0.2s; }
+
+.admin-candidate-image-container {
+  @apply h-64 overflow-hidden bg-gray-200 relative;
+}
+
+.admin-candidate-image {
+  @apply w-full h-full object-cover;
+}
+
+.admin-candidate-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center gap-2;
+}
+
+.admin-candidate-overlay-btn {
+  @apply p-2 bg-white rounded-lg hover:bg-gray-100 transition-colors;
+}
+
+.admin-candidate-info {
+  @apply p-4;
+}
+
+.admin-candidate-name {
+  @apply font-bold text-lg text-gray-900 mb-1;
+}
+
+.admin-candidate-job {
+  @apply text-sm text-blue-600 font-semibold mb-1;
+}
+
+.admin-candidate-company {
+  @apply text-sm text-gray-600 mb-2;
+}
+
+.admin-candidate-location {
+  @apply text-xs text-gray-500 mb-3;
+}
+
+.admin-candidate-actions {
+  @apply flex gap-2;
+}
+
+.admin-candidate-edit-btn {
+  @apply flex-1 p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors flex items-center justify-center gap-1;
+}
+
+.admin-candidate-delete-btn {
+  @apply flex-1 p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors flex items-center justify-center gap-1;
+}
+
+.admin-candidates-empty {
+  @apply col-span-full text-center py-16 bg-white rounded-xl;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.admin-candidates-empty-text {
+  @apply text-gray-600;
+}
+
+.admin-candidate-modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.admin-candidate-modal {
+  @apply bg-white rounded-xl shadow-xl max-w-2xl w-full my-8;
+  animation: slideUp 0.3s ease-out;
+}
+
+.admin-candidate-modal-header {
+  @apply flex justify-between items-center p-6 border-b;
+}
+
+.admin-candidate-modal-title {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.admin-candidate-modal-close {
+  @apply text-gray-400 hover:text-gray-600 transition-colors;
+}
+
+.admin-candidate-modal-body {
+  @apply p-6 space-y-4 max-h-[calc(100vh-200px)] overflow-y-auto;
+}
+
+.admin-candidate-form {
+  @apply space-y-4;
+}
+
+.admin-candidate-form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.admin-candidate-form-group {
+  @apply space-y-2;
+}
+
+.admin-candidate-form-label {
+  @apply block text-sm font-semibold text-gray-700;
+}
+
+.admin-candidate-form-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all;
+}
+
+.admin-candidate-form-input:focus {
+  @apply border-blue-500;
+}
+
+.admin-candidate-form-textarea {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all;
+  resize: vertical;
+}
+
+.admin-candidate-form-help {
+  @apply text-xs text-gray-500;
+}
+
+.admin-candidate-preview-section {
+  @apply space-y-2;
+}
+
+.admin-candidate-preview-label {
+  @apply block text-sm font-semibold text-gray-700;
+}
+
+.admin-candidate-preview-image {
+  @apply w-32 h-32 object-cover rounded-lg;
+}
+
+.admin-candidate-preview-error {
+  @apply w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center text-xs text-gray-400;
+}
+
+.admin-candidate-form-actions {
+  @apply flex gap-3 pt-4;
+}
+
+.admin-candidate-submit-btn {
+  @apply flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors;
+}
+
+.admin-candidate-submit-btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.admin-candidate-cancel-btn {
+  @apply px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors;
+}
+
+.admin-candidates-filter-bar {
+  @apply bg-white rounded-xl shadow-md p-4 mb-6 flex flex-col sm:flex-row gap-4;
+  animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
+.admin-candidates-search {
+  @apply flex-1 relative;
+}
+
+.admin-candidates-search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400;
+}
+
+.admin-candidates-search-input {
+  @apply w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.admin-candidates-filter-select {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white;
+}
+
+.admin-candidates-stats {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6;
+  animation: fadeIn 0.6s ease-out 0.3s backwards;
+}
+
+.admin-candidates-stat-card {
+  @apply bg-white rounded-xl shadow-md p-4;
+}
+
+.admin-candidates-stat-label {
+  @apply text-sm text-gray-600 mb-1;
+}
+
+.admin-candidates-stat-value {
+  @apply text-2xl font-bold;
+}
+
+.admin-candidates-stat-value-total {
+  @apply text-blue-600;
+}
+
+.admin-candidates-stat-value-month {
+  @apply text-green-600;
+}
+
+.admin-candidates-stat-value-week {
+  @apply text-orange-600;
+}
+
+.admin-candidate-badge-featured {
+  @apply absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold;
+}
+
+.admin-candidate-badge-recent {
+  @apply absolute top-2 left-2 bg-green-600 text-white px-2 py-1 rounded-full text-xs font-semibold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .admin-candidates-grid {
+    @apply xl:grid-cols-3;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-candidates-title {
+    @apply text-3xl;
+  }
+
+  .admin-candidates-header {
+    @apply flex-col items-start gap-4;
+  }
+
+  .admin-candidates-add-btn {
+    @apply w-full justify-center;
+  }
+
+  .admin-candidates-grid {
+    @apply lg:grid-cols-2;
+  }
+
+  .admin-candidate-modal {
+    @apply m-4;
+  }
+
+  .admin-candidate-modal-header {
+    @apply p-4;
+  }
+
+  .admin-candidate-modal-body {
+    @apply p-4;
+  }
+
+  .admin-candidate-modal-title {
+    @apply text-xl;
+  }
+
+  .admin-candidate-form-row {
+    @apply grid-cols-1;
+  }
+
+  .admin-candidates-stats {
+    @apply gap-3;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-candidates-filter-bar {
+    @apply p-3;
+  }
+
+  .admin-candidates-grid {
+    @apply sm:grid-cols-1;
+  }
+
+  .admin-candidate-card {
+    @apply max-w-sm mx-auto;
+  }
+
+  .admin-candidate-form-actions {
+    @apply flex-col;
+  }
+
+  .admin-candidate-submit-btn,
+  .admin-candidate-cancel-btn {
+    @apply w-full;
+  }
+}
+
+.admin-candidate-form-error {
+  @apply text-sm text-red-600 mt-1;
+}
+
+.admin-candidate-form-input.error,
+.admin-candidate-form-textarea.error {
+  @apply border-red-500 focus:ring-red-500;
+}
+
+.admin-candidates-loading {
+  @apply flex items-center justify-center py-16;
+}
+
+.admin-candidates-spinner {
+  @apply inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin;
+}
+
+.admin-candidate-delete-confirm {
+  @apply bg-red-50 border border-red-200 rounded-lg p-4 mb-4;
+}
+
+.admin-candidate-delete-confirm-text {
+  @apply text-red-800 mb-3;
+}
+
+.admin-candidate-delete-confirm-actions {
+  @apply flex gap-2;
+}
+
+.admin-candidate-delete-confirm-btn {
+  @apply flex-1 bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors;
+}
+
+.admin-candidate-delete-cancel-btn {
+  @apply flex-1 border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors;
+}
+
+.admin-candidates-sort {
+  @apply flex items-center gap-2 text-sm;
+}
+
+.admin-candidates-sort-label {
+  @apply text-gray-600;
+}
+
+.admin-candidates-sort-select {
+  @apply px-3 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-sm;
+}
+
+.admin-candidates-view-toggle {
+  @apply flex gap-2 bg-gray-100 p-1 rounded-lg;
+}
+
+.admin-candidates-view-btn {
+  @apply px-3 py-1 rounded-md transition-colors;
+}
+
+.admin-candidates-view-btn-active {
+  @apply bg-white text-blue-600 shadow-sm;
+}
+
+.admin-candidates-view-btn-inactive {
+  @apply text-gray-600 hover:text-gray-900;
+}

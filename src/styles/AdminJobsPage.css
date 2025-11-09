@@ -1,0 +1,376 @@
+.admin-jobs-page {
+  @apply min-h-screen bg-gray-50 py-8;
+}
+
+.admin-jobs-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.admin-jobs-header {
+  @apply flex justify-between items-center mb-8;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.admin-jobs-header-content {
+  @apply flex-1;
+}
+
+.admin-jobs-title {
+  @apply text-4xl font-bold text-gray-900 mb-2;
+}
+
+.admin-jobs-subtitle {
+  @apply text-gray-600;
+}
+
+.admin-jobs-add-btn {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2 shadow-md hover:shadow-lg;
+}
+
+.admin-jobs-add-btn:active {
+  @apply transform scale-95;
+}
+
+.admin-jobs-list {
+  @apply space-y-4;
+}
+
+.admin-job-card {
+  @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.admin-job-card-content {
+  @apply flex justify-between items-start;
+}
+
+.admin-job-info {
+  @apply flex-1;
+}
+
+.admin-job-header {
+  @apply flex items-center gap-3 mb-2;
+}
+
+.admin-job-title {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.admin-job-status-badge {
+  @apply px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.admin-job-status-active {
+  @apply bg-green-100 text-green-700;
+}
+
+.admin-job-status-inactive {
+  @apply bg-red-100 text-red-700;
+}
+
+.admin-job-company {
+  @apply text-gray-700 mb-2;
+}
+
+.admin-job-meta {
+  @apply text-gray-600 text-sm;
+}
+
+.admin-job-actions {
+  @apply flex gap-2;
+}
+
+.admin-job-action-btn {
+  @apply p-2 rounded-lg transition-colors;
+}
+
+.admin-job-edit-btn {
+  @apply text-blue-600 hover:bg-blue-50;
+}
+
+.admin-job-delete-btn {
+  @apply text-red-600 hover:bg-red-50;
+}
+
+.admin-jobs-empty {
+  @apply text-center py-16 bg-white rounded-xl;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.admin-jobs-empty-text {
+  @apply text-gray-600;
+}
+
+.admin-job-modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.admin-job-modal {
+  @apply bg-white rounded-xl shadow-xl max-w-3xl w-full my-8;
+  animation: slideUp 0.3s ease-out;
+}
+
+.admin-job-modal-header {
+  @apply flex justify-between items-center p-6 border-b;
+}
+
+.admin-job-modal-title {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.admin-job-modal-close {
+  @apply text-gray-400 hover:text-gray-600 transition-colors;
+}
+
+.admin-job-modal-body {
+  @apply p-6 space-y-4 max-h-[calc(100vh-200px)] overflow-y-auto;
+}
+
+.admin-job-form {
+  @apply space-y-4;
+}
+
+.admin-job-form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.admin-job-form-group {
+  @apply space-y-2;
+}
+
+.admin-job-form-label {
+  @apply block text-sm font-semibold text-gray-700;
+}
+
+.admin-job-form-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all;
+}
+
+.admin-job-form-input:focus {
+  @apply border-blue-500;
+}
+
+.admin-job-form-select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white transition-all;
+}
+
+.admin-job-form-textarea {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all;
+  resize: vertical;
+}
+
+.admin-job-form-checkbox-wrapper {
+  @apply flex items-center;
+}
+
+.admin-job-form-checkbox {
+  @apply w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+}
+
+.admin-job-form-checkbox-label {
+  @apply ml-2 text-sm text-gray-700;
+}
+
+.admin-job-form-actions {
+  @apply flex gap-3 pt-4;
+}
+
+.admin-job-submit-btn {
+  @apply flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors;
+}
+
+.admin-job-submit-btn:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.admin-job-cancel-btn {
+  @apply px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors;
+}
+
+.admin-jobs-filter-bar {
+  @apply bg-white rounded-xl shadow-md p-4 mb-6 flex flex-col sm:flex-row gap-4;
+  animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
+.admin-jobs-search {
+  @apply flex-1 relative;
+}
+
+.admin-jobs-search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400;
+}
+
+.admin-jobs-search-input {
+  @apply w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.admin-jobs-filter-select {
+  @apply px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white;
+}
+
+.admin-jobs-stats {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6;
+  animation: fadeIn 0.6s ease-out 0.3s backwards;
+}
+
+.admin-jobs-stat-card {
+  @apply bg-white rounded-xl shadow-md p-4;
+}
+
+.admin-jobs-stat-label {
+  @apply text-sm text-gray-600 mb-1;
+}
+
+.admin-jobs-stat-value {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.admin-jobs-stat-value-active {
+  @apply text-green-600;
+}
+
+.admin-jobs-stat-value-inactive {
+  @apply text-red-600;
+}
+
+.admin-job-bulk-actions {
+  @apply bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 flex items-center justify-between;
+}
+
+.admin-job-bulk-selected {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.admin-job-bulk-buttons {
+  @apply flex gap-2;
+}
+
+.admin-job-bulk-btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.admin-job-bulk-activate {
+  @apply bg-green-600 text-white hover:bg-green-700;
+}
+
+.admin-job-bulk-deactivate {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.admin-job-bulk-delete {
+  @apply bg-gray-600 text-white hover:bg-gray-700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-jobs-title {
+    @apply text-3xl;
+  }
+
+  .admin-jobs-header {
+    @apply flex-col items-start gap-4;
+  }
+
+  .admin-jobs-add-btn {
+    @apply w-full justify-center;
+  }
+
+  .admin-job-card {
+    @apply p-4;
+  }
+
+  .admin-job-card-content {
+    @apply flex-col gap-4;
+  }
+
+  .admin-job-actions {
+    @apply justify-end;
+  }
+
+  .admin-job-modal {
+    @apply m-4;
+  }
+
+  .admin-job-modal-header {
+    @apply p-4;
+  }
+
+  .admin-job-modal-body {
+    @apply p-4;
+  }
+
+  .admin-job-modal-title {
+    @apply text-xl;
+  }
+
+  .admin-job-form-row {
+    @apply grid-cols-1;
+  }
+
+  .admin-jobs-stats {
+    @apply gap-3;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-jobs-filter-bar {
+    @apply p-3;
+  }
+
+  .admin-job-form-actions {
+    @apply flex-col;
+  }
+
+  .admin-job-submit-btn,
+  .admin-job-cancel-btn {
+    @apply w-full;
+  }
+
+  .admin-job-bulk-actions {
+    @apply flex-col items-stretch gap-3;
+  }
+
+  .admin-job-bulk-buttons {
+    @apply flex-col;
+  }
+}
+
+.admin-job-form-error {
+  @apply text-sm text-red-600 mt-1;
+}
+
+.admin-job-form-input.error,
+.admin-job-form-select.error,
+.admin-job-form-textarea.error {
+  @apply border-red-500 focus:ring-red-500;
+}
+
+.admin-jobs-loading {
+  @apply flex items-center justify-center py-16;
+}
+
+.admin-jobs-spinner {
+  @apply inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin;
+}
